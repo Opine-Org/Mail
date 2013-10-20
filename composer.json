@@ -1,0 +1,22 @@
+{
+    "name": "virtuecenter/mail",
+    "type": "library",
+    "description": "Lirary for sending and broadcasting email",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan Mahoney",
+            "email": "ryan@virtuecenter.com",
+            "homepage": "http://www.virtuecenter.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+    	"php": ">=5.4.0",
+        "aws/aws-sdk-php": "2.4.*@dev"
+    },
+    "autoload": {
+        "psr-0": {"Mail": "src/"}
+    }
+}
