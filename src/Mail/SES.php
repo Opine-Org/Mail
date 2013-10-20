@@ -5,7 +5,7 @@ use Aws\Ses\SesClient;
 class SES {
 	private $config;
 	private $client;
-	private $message;
+    private $message = false;
 
 	public function __construct ($config) {
 		$config = $config->amazonses;

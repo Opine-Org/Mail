@@ -3,16 +3,9 @@ namespace Mail;
 
 class Mail {
 	private $transport;
-	private $config;
-	private $key;
-    private $secret;
-    private $region;
-    private $message = false;
-    private $errors;
 
-	public function __construct ($transport, $config, $errors) {
+	public function __construct ($transport) {
 		$this->transport = $transport;
-		$this->errors = $errors;
 	}
 
 	public function message ($emailFrom, array $emailTo, array $emailCC, array $emailBCC, $messageSubject, $messageText, $messageHTML='', array $replyToAddresses=[], $returnPath='') {
