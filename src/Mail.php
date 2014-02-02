@@ -2,7 +2,7 @@
 /**
  * Opine\Mail
  *
- * Copyright (c)2013 Ryan Mahoney, https://github.com/virtuecenter <ryan@virtuecenter.com>
+ * Copyright (c)2013, 2014 Ryan Mahoney, https://github.com/Opine-Org <ryan@virtuecenter.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,18 +25,18 @@
 namespace Opine;
 
 class Mail {
-	private $transport;
+    private $transport;
 
-	public function __construct ($transport) {
-		$this->transport = $transport;
-	}
+    public function __construct ($transport) {
+        $this->transport = $transport;
+    }
 
-	public function message ($emailFrom, array $emailTo, array $emailCC, array $emailBCC, $messageSubject, $messageText, $messageHTML='', array $replyToAddresses=[], $returnPath='') {
-		$this->transport->message($emailFrom, $emailTo, $emailCC, $emailBCC, $messageSubject, $messageText, $messageHTML, $replyToAddresses, $returnPath);
-		return $this;
-	}
+    public function message ($emailFrom, array $emailTo, array $emailCC, array $emailBCC, $messageSubject, $messageText, $messageHTML='', array $replyToAddresses=[], $returnPath='') {
+        $this->transport->message($emailFrom, $emailTo, $emailCC, $emailBCC, $messageSubject, $messageText, $messageHTML, $replyToAddresses, $returnPath);
+        return $this;
+    }
 
-	public function send () {
-		return $this->transport->send(); 
-	}
+    public function send () {
+        return $this->transport->send(); 
+    }
 }
