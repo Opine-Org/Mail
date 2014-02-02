@@ -1,4 +1,4 @@
-mail
+Mail
 ====
 
-Email sending and broadcasting, and a transport class for Amazon SES
+Service for sending and broadcasting email, and a transport class for Amazon SES

@@ -1,14 +1,14 @@
 {
-    "name": "virtuecenter/mail",
+    "name": "opine/mail",
     "type": "library",
-    "description": "Lirary for sending and broadcasting email",
+    "description": "Service for sending and broadcasting email, and a transport class for Amazon SES",
     "keywords": [],
     "license": "MIT",
     "authors": [
         {
             "name": "Ryan Mahoney",
             "email": "ryan@virtuecenter.com",
-            "homepage": "http://www.virtuecenter.com",
+            "homepage": "http://opine-php.org",
             "role": "Developer"
         }
     ],
@@ -17,6 +17,6 @@
         "aws/aws-sdk-php": "2.4.*@dev"
     },
     "autoload": {
-        "psr-0": {"Mail": "src/"}
+        "psr-4": {"Opine\\": "src/"}
     }
 }
