@@ -1,0 +1,7 @@
+services:
+    mail:
+        class:     'Opine\Mail'
+        arguments: ['@mailSES']
+    mailSES:
+        class:     'Opine\SES'
+        arguments: ['@config']
