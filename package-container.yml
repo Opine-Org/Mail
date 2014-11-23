@@ -4,4 +4,4 @@ services:
         arguments: ['@mailSES']
     mailSES:
         class:     'Opine\SES'
-        arguments: ['@config']
+        arguments: ['config.amazonses']
