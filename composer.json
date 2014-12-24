@@ -1,5 +1,5 @@
 {
-    "name": "opine\/mail",
+    "name": "opine/mail",
     "type": "library",
     "description": "Service for sending and broadcasting email, and a transport class for Amazon SES",
     "keywords": [
@@ -10,17 +10,17 @@
         {
             "name": "Ryan Mahoney",
             "email": "ryan@virtuecenter.com",
-            "homepage": "http:\/\/opine-php.org",
+            "homepage": "http://opine-php.org",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">=5.4.0",
-        "aws\/aws-sdk-php": "2.4.*@dev"
+        "aws/aws-sdk-php": "2.4.*@dev"
     },
     "autoload": {
         "psr-4": {
-            "Opine\\": "src\/"
+            "Opine\\": "src/"
         }
     }
 }
