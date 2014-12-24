@@ -10,10 +10,10 @@
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -24,19 +24,24 @@
  */
 namespace Opine;
 
-class Mail {
+class Mail
+{
     private $transport;
 
-    public function __construct ($transport) {
+    public function __construct($transport)
+    {
         $this->transport = $transport;
     }
 
-    public function message ($emailFrom, array $emailTo, array $emailCC, array $emailBCC, $messageSubject, $messageText, $messageHTML='', array $replyToAddresses=[], $returnPath='') {
+    public function message($emailFrom, array $emailTo, array $emailCC, array $emailBCC, $messageSubject, $messageText, $messageHTML = '', array $replyToAddresses = [], $returnPath = '')
+    {
         $this->transport->message($emailFrom, $emailTo, $emailCC, $emailBCC, $messageSubject, $messageText, $messageHTML, $replyToAddresses, $returnPath);
+
         return $this;
     }
 
-    public function send () {
-        return $this->transport->send(); 
+    public function send()
+    {
+        return $this->transport->send();
     }
 }

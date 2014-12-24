@@ -23,18 +23,22 @@
  * THE SOFTWARE.
  */
 namespace Opine;
+
 use Aws\Ses\SesClient;
 
-class SES {
+class SES
+{
     private $config;
     private $client;
     private $message = false;
 
-    public function __construct (Array $config) {
-        $this->client = SesClient::factory((array)$config);
+    public function __construct(Array $config)
+    {
+        $this->client = SesClient::factory((array) $config);
     }
 
-    public function message ($emailFrom, array $emailTo, array $emailCC, array $emailBCC, $messageSubject, $messageText, $messageHTML='', array $replyToAddresses=[], $returnPath='') {
+    public function message($emailFrom, array $emailTo, array $emailCC, array $emailBCC, $messageSubject, $messageText, $messageHTML = '', array $replyToAddresses = [], $returnPath = '')
+    {
         $this->message = [];
         $this->message['Source'] = $emailFrom;
         foreach ($emailTo as $to) {
@@ -62,11 +66,13 @@ class SES {
         }
     }
 
-    public function send () {
+    public function send()
+    {
         if ($this->message === false) {
             throw new \Exception('Unformed message.');
         }
-         $result = $this->client->sendEmail($this->message);
+        $result = $this->client->sendEmail($this->message);
+
         return $result->get('MessageId');
     }
 }
