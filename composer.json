@@ -8,14 +8,14 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Ryan Mahoney",
-            "email": "ryan@virtuecenter.com",
+            "name"    : "Ryan Mahoney",
+            "email"   : "ryan@virtuecenter.com",
             "homepage": "http://opine-php.org",
-            "role": "Developer"
+            "role"    : "Developer"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php"            : ">=5.4.0",
         "aws/aws-sdk-php": "2.4.*@dev"
     },
     "autoload": {
@@ -23,5 +23,5 @@
             "Opine\\": "src/"
         }
     },
-    "version": "2.0.2"
+    "version": "2.0.6"
 }
