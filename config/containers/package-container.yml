@@ -1,7 +1,9 @@
 services:
     mail:
-        class:     'Opine\Mail'
-        arguments: ['@mailSES']
+        class: Opine\Mail
+        arguments:
+            - "@mailSES"
     mailSES:
-        class:     'Opine\SES'
-        arguments: ['config.amazonses']
+        class: Opine\SES
+        arguments:
+            - config.amazonses
